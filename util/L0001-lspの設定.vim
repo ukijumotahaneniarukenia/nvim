@@ -11,7 +11,7 @@ let g:lsp_diagnostics_echo_cursor = 1 " enable echo under cursor when in normal 
 let g:lsp_signs_error = {'text': '✗'}
 let g:lsp_signs_warning = {'text': '‼'}
 
-
+let g:lsp_diagnostics_enabled = 0  " 警告やエラーの表示はALEに任せるのでOFFにする
 
 " 言語用Serverの設定
 augroup MyLsp
@@ -48,29 +48,3 @@ function! s:configure_lsp() abort
   nnoremap <buffer> <F1> :<C-u>LspImplementation<CR>
   nnoremap <buffer> <F2> :<C-u>LspRename<CR>
 endfunction
-let g:lsp_diagnostics_enabled = 0  " 警告やエラーの表示はALEに任せるのでOFFにする
-
-
-
-
-
-
-
-
-
-
-"if executable('pyls')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'pyls',
-"        \ 'cmd': {server_info->['pyls']},
-"        \ 'whitelist': ['python'],
-"        \ })
-"endif
-"
-"if executable('clangd')
-"    au User lsp_setup call lsp#register_server({
-"        \ 'name': 'clangd',
-"        \ 'cmd': {server_info->['clangd']},
-"        \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-"        \ })
-"endif
