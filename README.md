@@ -28,9 +28,5 @@ mkdir -p /home/aine/.config/nvim/util/ale
 ```
 rm -rf  $HOME/.config/nvim
 
-mkdir -p $HOME/.config
-
-cd $HOME/.config
-
-git clone https://github.com/ukijumotahaneniarukenia/nvim.git
+git clone https://github.com/ukijumotahaneniarukenia/nvim.git  $HOME/.config/nvim
 ```
